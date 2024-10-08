@@ -1,0 +1,206 @@
+/* ======================= */
+/* Table of Contents (TOC) */
+/* ======================= */
+/* 1. General Styles
+   2. Header Styles
+   3. Icon Button Styles
+   4. Modal Styles
+   5. Animations
+   6. Media Queries
+*/
+
+/* ======================= */
+/* 1. General Styles       */
+/* ======================= */
+
+header {
+    margin-top: 1rem;
+}
+
+/* Flexbox for the header navigation */
+header ul.flex {
+    gap: 16px;
+}
+
+/* ======================= */
+/* 2. Header Styles        */
+/* ======================= */
+
+/* Styling for header links */
+header ul li a {
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Hover effect for header links */
+header ul li a:hover {
+    color: var(--blue);
+    opacity: 1;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* General button styling inside header */
+header button {
+    font-size: 1.2rem;
+}
+
+/* Flexbox layout for the header */
+header.flex {
+    justify-content: space-between;
+    padding: 0 2.4rem;
+}
+
+/* Styling for the navigation section */
+header.flex nav {
+    background-color: var(--bghreader);
+    padding: 0.77rem 1.6rem;
+    border-radius: 55px;
+    margin-top: 1.2rem;
+    box-shadow: 1px 1px 40px rgba(49, 48, 48, 0.292);
+}
+
+/* ======================= */
+/* 3. Icon Button Styles   */
+/* ======================= */
+
+/* Styling for icon buttons (menu, moon) */
+header .icon-moon-o, .icon-menu {
+    background-color: var(--bghreader);
+    height: 2.4rem;
+    width: 2.4rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--suptitle);
+    border: 1px solid rgba(250, 186, 114, 0.188);
+    transition: 0.2s;
+}
+header {
+    font: weight 500px;
+}
+
+/* Hover effect for icon buttons */
+header .icon-moon-o:hover, .icon-menu:hover {
+    border: 0.2px solid orange;
+    color: var(--title);
+}
+.icon-sun{
+
+    border: 0.2px solid orange;
+    height: 2.4rem;
+    width: 2.4rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    color: rgb(255, 166, 0);
+    border: 1px solid rgba(250, 186, 114, 0.188);
+    transition: 0.2s;
+    box-shadow: 1px 1px 40px rgba(35, 35, 36, 0.165);
+}
+.icon-sun:hover{
+    border: 0.2px solid orange;
+}
+/* Close icon styling */
+header .icon-close {
+    font-size: 1.5rem;
+    color: var(--suptitle);
+    transition: 0.3s;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+
+}
+
+/* Hover effect for close icon */
+header .icon-close:hover {
+    color: crimson;
+    font-size: 1.7rem;
+    rotate: 180deg;
+}
+
+/* ======================= */
+/* 4. Modal Styles         */
+/* ======================= */
+
+/* Styling for the fixed modal background */
+header .fixed {
+    position: fixed;
+    inset: 0;
+    z-index: 11;
+    background-color: rgba(40, 40, 48, 0.911);
+    backdrop-filter: blur(8px);
+}
+
+/* Modal content styling */
+header .fixed ul.modal {
+    animation: mymove 0.5s 1;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    display: block;
+    gap: 2rem;
+    background-color: var(--secondary);
+}
+
+/* List item styling inside modal */
+header .fixed ul.modal li {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.77rem;
+    padding-top: 0.5rem;
+}
+
+/* Removing border for the last list item */
+header .fixed ul.modal li:last-child {
+    border: none;
+}
+
+/* Adjusting the first list item alignment */
+header .fixed ul.modal li:first-child {
+    text-align: right;
+    border: none;
+    padding-bottom: 0;
+    padding-top: 0.2rem;
+}
+
+/* Modal links styling */
+header .fixed ul.modal li a {
+    font-size: 1rem;
+}
+
+/* ======================= */
+/* 5. Animations           */
+/* ======================= */
+
+/* Scale animation for the modal */
+@keyframes mymove {
+    0%   {scale: 0;}
+    60%  {scale: 1.1;}
+    100% {scale: 1;}
+}
+
+/* ======================= */
+/* 6. Media Queries        */
+/* ======================= */
+
+/* Mobile specific styles (max-width: 700px) */
+@media (max-width: 700px) {
+    header.flex nav {
+        display: none;
+    }
+    header button .menu {
+        display: block;
+    }
+}
+
+/* Desktop specific styles (min-width: 700px) */
+@media (min-width: 700px) {
+    header button.menu {
+        display: none;
+    }
+}

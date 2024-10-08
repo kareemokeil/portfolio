@@ -1,0 +1,91 @@
+/* ==========================================
+   Table of Contents (TOC)
+   ==========================================
+   1. Left Section
+      1.1. Layout
+      1.2. Avatar
+      1.3. Verified Icon
+      1.4. Title
+      1.5. Description (Paragraph)
+      1.6. Social Icons
+         1.6.1. Icon Hover
+   ========================================== */
+
+/* 1.1. Layout for Hero Section */
+section.hero {
+    margin-top: 1rem;
+}
+
+section.hero .left-section {
+   width: 96%;
+}
+
+/* 1.2. Avatar Styling */
+section .parent-avatar img {
+    height: 88px;
+    border: 1px solid rgb(43, 255, 0); 
+    border-radius: 50%;
+    padding: 2px;
+}
+
+section .parent-avatar {
+    align-items: end;
+}
+
+/* 1.3. Verified Icon */
+section.hero .left-section .icon-verified {
+    color: var(--blue); 
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+/* 1.4. Title Styling */
+section.hero .title {
+    margin: 24px 0;
+    font-size: 2.5rem;
+    color: var(--title);
+}
+
+/* 1.5. Description (Paragraph) Styling */
+section .left-section p {
+    color: var(--suptitle); 
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin-bottom: 32px;
+}
+
+/* 1.6. Social Icons */
+section .left-section .icons {
+    font-size: 1.3rem;
+    gap: 1rem; 
+    color: var(--suptitle);
+}
+
+/* 1.6.1. Icon Hover Effect */
+section .left-section .icon:hover {
+    color: var(--icon-hover); 
+    cursor: pointer;
+    transform: scale(1.1); 
+    transition: 0.3s; 
+}
+
+.dev-animation {
+    width: 100%;
+    transform: translate(0, 0) scale(1);
+    max-width: 600px; 
+    margin: 0 auto; 
+  }
+  
+  
+  
+  @media (min-width: 1100px) {
+    .dev-animation {
+      transform: translate(80px, 55px) scale(1.5);
+    }
+  }
+  @media (max-width: 1100px) {
+    .dev-animation {
+     display: none;
+    }
+  }
+  
