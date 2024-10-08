@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./header.css";
 
 const Header = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("currentmode") || "dark");
+  const [theme, setTheme] = useState(
+    localStorage.getItem("currentmode") || "dark"
+  );
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -19,7 +21,6 @@ const Header = () => {
 
   return (
     <header className="flex">
-
       <button
         className="menu icon-menu flex"
         aria-label="Open Menu"
@@ -28,48 +29,61 @@ const Header = () => {
 
       <div />
 
-
       <nav>
         <ul className="flex">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Articles</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Speaking</a></li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Articles</a>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="#">Speaking</a>
+          </li>
         </ul>
       </nav>
-  
-      <button
-   
-        onClick={() => {
 
+      <button
+        onClick={() => {
           setTheme(theme === "dark" ? "light" : "dark");
         }}
         aria-label="Toggle Theme"
       >
-        { theme === "dark" ? (
-        <span className="icon-moon-o flex"></span>
-) : (
-        <span className="icon-sun flex"></span>
-        )} 
+        {theme === "dark" ? (
+          <span className="icon-moon-o flex"></span>
+        ) : (
+          <span className="icon-sun flex"></span>
+        )}
       </button>
-
 
       {showModal && (
         <div className="fixed">
           <ul className="modal">
             <li>
-
               <button
                 className="icon-close"
                 aria-label="Close Menu"
                 onClick={() => setShowModal(false)}
               ></button>
             </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Articles</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Speaking</a></li>
-            <li><a href="#">Contact</a></li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Articles</a>
+            </li>
+            <li>
+              <a href="#">Projects</a>
+            </li>
+            <li>
+              <a href="#">Speaking</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
           </ul>
         </div>
       )}
