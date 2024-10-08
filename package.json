@@ -2,12 +2,13 @@
   "name": "myportfolio",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "module",    
+  "homepage": "https://kareemokeil.github.io/portfolio",
+
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
     "build": "vite build",
-    "homepage": "https://kareemokeil.github.io/portfolio",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
